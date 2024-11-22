@@ -1,5 +1,5 @@
 class Student:
-    def init(self, name, scores):
+    def __init__(self, name, scores):
         self.name = name
         self.scores = scores
     
@@ -10,13 +10,15 @@ class Student:
         return all(score >= 40 for score in self.scores)
 
 class PerformanceTracker:
-    def init(self):
+    def __init__(self):
         self.students = {}
     
     def add_student(self, name, scores):
         self.students[name] = Student(name, scores)
     
     def calculate_class_average(self):
+        if not self.students:
+            return 0
         total_score = sum(student.calculate_average() for student in self.students.values())
         return total_score / len(self.students)
     
@@ -24,7 +26,8 @@ class PerformanceTracker:
         for student in self.students.values():
             avg = student.calculate_average()
             status = "Passing" if student.is_passing() else "Failing"
-            print(f"Student: {student.name}, Average Score: {avg:.2f}, Status: {status}")
+            print(f"\n|=========     Student Record     =========|")
+            print(f"Student: {student.name}\nAverage Score: {avg:.2f}\nStatus: {status}")
 
 # Main program to handle input
 def main():
@@ -49,8 +52,9 @@ def main():
     # Display results
     tracker.display_student_performance()
     class_avg = tracker.calculate_class_average()
+    print(f"\n|=========      Class Average     =========|")
     print(f"Class Average: {class_avg:.2f}")
 
 # Run the program
-if name == "main":
+if __name__ == "__main__":
     main()
