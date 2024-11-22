@@ -147,7 +147,7 @@ Status: Passing
 |=========     Student Record     =========|
 Student: Saad
 Average Score: 85.33
-Status: Failing
+Status: Passing
 
 |=========      Class Average     =========|
 Class Average: 85.33
