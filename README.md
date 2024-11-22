@@ -93,7 +93,7 @@ The main function handles user interaction, allowing the user to add students an
    Example:
    ```
    |=========     Student Record     =========|
-   Student: Alice
+   Student: Rameez
    Average Score: 85.33
    Status: Passing
    ```
@@ -131,24 +131,24 @@ Enter score for Science: 90
 Enter score for English: 86
 Do you want to add another student? (yes/no): yes
 Enter student's name: Bob
-Enter score for Math: 50
-Enter score for Science: 35
-Enter score for English: 40
+Enter score for Math: 80
+Enter score for Science: 90
+Enter score for English: 86
 Do you want to add another student? (yes/no): no
 ```
 
 #### **Output**:
 ```
 |=========     Student Record     =========|
-Student: Alice
+Student: Rameez
 Average Score: 85.33
 Status: Passing
 
 |=========     Student Record     =========|
-Student: Bob
-Average Score: 41.67
+Student: Saad
+Average Score: 85.33
 Status: Failing
 
 |=========      Class Average     =========|
-Class Average: 63.50
+Class Average: 85.33
 ```
